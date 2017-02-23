@@ -3,7 +3,7 @@ library(ggplot2)
 library(scales)
 
 d = fread('data/cube.csv', sep=",", header=T)
-d = d[2:(nrow(d)-1), ]
+d = d[2:nrow(d), ]
 dates = seq(as.Date(d$timestamp[1]), length = (nrow(d) + 36), by = "month")
 d[['timestamp']] = NULL
 d <- sapply(d, as.numeric)

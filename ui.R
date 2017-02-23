@@ -29,7 +29,7 @@ shinyUI(fluidPage(
   theme = shinytheme("cosmo"),
   
   # Application title
-  titlePanel("Wikipedia Pageview Forecasting"),
+  titlePanel("Wikipedia Pageview Trends"),
   
   # Sidebar with a slider input for the number of bins
   sidebarLayout(
@@ -37,7 +37,7 @@ shinyUI(fluidPage(
     sidebarPanel(
       
       radioButtons("method", "Forecasting Method:",
-                   c( "ARIMA" = "arima", "Linear Regression" = "linear")),
+                   c( "Linear Regression" = "linear", "ARIMA" = "arima")),
       
       sliderInput("months",
                   "Number of Months:",
